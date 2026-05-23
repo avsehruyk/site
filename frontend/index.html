@@ -11,25 +11,18 @@
 
 <p id="result"></p>
 
-<script>
-const API = "https://site-sncl.onrender.com";
 
-function tradeTest() {
+<script>
+window.testTrade = function() {
+    const API = "https://site-sncl.onrender.com";
+
     fetch(API + "/trade?item1=dragon&item2=buddha")
-    .then(res => res.json())
-    .then(data => {
-        alert(
-            "RESULT: " + data.result +
-            "\nGave: " + data.value_gave +
-            "\nGot: " + data.value_got
-        );
+    .then(r => r.json())
+    .then(d => {
+        alert(d.result);
     })
-    .catch(err => {
-        alert("Hata: API bağlanamadı");
-        console.log(err);
-    });
+    .catch(err => console.log(err));
 }
 </script>
-
 </body>
 </html>

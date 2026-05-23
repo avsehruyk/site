@@ -1,0 +1,22 @@
+{
+  "kitsune": {
+    "value": 22,
+    "tier": "S+",
+    "demand": 96,
+    "rate": "Overrated"
+  },
+
+  "dragon": {
+    "value": 26,
+    "tier": "S+",
+    "demand": 100,
+    "rate": "Overrated"
+  },
+
+  "buddha": {
+    "value": 8,
+    "tier": "A",
+    "demand": 70,
+    "rate": "Stable"
+  }
+}

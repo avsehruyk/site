@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blox Value MVP</title>
+</head>
+<body>
+
+<h1>Trade Test</h1>
+
+<button onclick="testTrade()">Test Trade</button>
+
+<p id="result"></p>
+
+<script>
+function testTrade() {
+    fetch("http://127.0.0.1:8000/trade?item1=dragon&item2=buddha")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("result").innerText = data.result;
+    });
+}
+</script>
+
+</body>
+</html>

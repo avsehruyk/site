@@ -12,11 +12,21 @@
 <p id="result"></p>
 
 <script>
-function testTrade() {
-    fetch("http://127.0.0.1:8000/trade?item1=dragon&item2=buddha")
+const API = "https://site-sncl.onrender.com";
+
+function tradeTest() {
+    fetch(API + "/trade?item1=dragon&item2=buddha")
     .then(res => res.json())
     .then(data => {
-        document.getElementById("result").innerText = data.result;
+        alert(
+            "RESULT: " + data.result +
+            "\nGave: " + data.value_gave +
+            "\nGot: " + data.value_got
+        );
+    })
+    .catch(err => {
+        alert("Hata: API bağlanamadı");
+        console.log(err);
     });
 }
 </script>
